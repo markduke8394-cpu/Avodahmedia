@@ -1,0 +1,36 @@
+{
+  "name": "avodahmedia-lead-dashboard",
+  "version": "1.0.0",
+  "description": "Lead management dashboard for Avodahmedia",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext .tsx,.ts",
+    "format": "prettier --write 'src/**/*.{tsx,ts,css}'"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.1",
+    "axios": "^1.6.2",
+    "socket.io-client": "^4.7.2",
+    "recharts": "^2.10.3",
+    "zustand": "^4.4.5",
+    "date-fns": "^2.30.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.42",
+    "@types/react-dom": "^18.2.17",
+    "@types/node": "^20.10.5",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.8",
+    "@vitejs/plugin-react": "^4.2.1",
+    "prettier": "^3.1.1",
+    "eslint": "^8.56.0",
+    "@typescript-eslint/parser": "^6.17.0",
+    "@typescript-eslint/eslint-plugin": "^6.17.0"
+  }
+}

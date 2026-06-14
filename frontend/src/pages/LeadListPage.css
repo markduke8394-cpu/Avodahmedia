@@ -1,0 +1,150 @@
+.lead-list-page {
+  width: 100%;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.filter-select {
+  padding: 0.5rem 1rem;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: inherit;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #646cff;
+}
+
+.loading,
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.leads-table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.leads-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.leads-table thead {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.leads-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 1px solid #333;
+}
+
+.leads-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.leads-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.lead-name {
+  font-weight: 500;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.badge-platform {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  background-color: rgba(102, 126, 234, 0.2);
+  color: #a0aef7;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.badge-new {
+  background-color: rgba(100, 200, 255, 0.2);
+  color: #64c8ff;
+}
+
+.badge-contacted {
+  background-color: rgba(255, 193, 7, 0.2);
+  color: #ffc107;
+}
+
+.badge-qualified {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+}
+
+.badge-won {
+  background-color: rgba(76, 175, 80, 0.3);
+  color: #4caf50;
+}
+
+.badge-lost {
+  background-color: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+}
+
+.priority-badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.priority-urgent {
+  background-color: rgba(244, 67, 54, 0.3);
+  color: #ff6b6b;
+}
+
+.priority-high {
+  background-color: rgba(255, 152, 0, 0.2);
+  color: #ff9800;
+}
+
+.priority-medium {
+  background-color: rgba(255, 193, 7, 0.2);
+  color: #ffc107;
+}
+
+.priority-low {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+}
+
+.action-link {
+  color: #646cff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.action-link:hover {
+  text-decoration: underline;
+}

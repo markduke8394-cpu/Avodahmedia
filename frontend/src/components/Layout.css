@@ -1,0 +1,51 @@
+.logo {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.nav-menu {
+  margin-bottom: 3rem;
+}
+
+.user-section {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+}
+
+.user-info {
+  margin-bottom: 1rem;
+}
+
+.user-name {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.user-email {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.logout-btn {
+  width: 100%;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #cc0000;
+}
