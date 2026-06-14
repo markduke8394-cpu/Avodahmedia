@@ -39,7 +39,22 @@ router.get('/:id', async (req: Request, res: Response) => {
 
 // Create lead (manual entry)
 router.post('/', async (req: Request, res: Response) => {
-  const { platformId, firstName, lastName, email, phone, company, message, rawData } = req.body;
+  const {
+    platformId,
+    firstName,
+    lastName,
+    email,
+    phone,
+    company,
+    message,
+    serviceInterest,
+    budgetRange,
+    dealValue,
+    confidenceLevel,
+    decisionMaker,
+    status,
+    rawData,
+  } = req.body;
 
   if (!platformId) {
     return res.status(400).json({ error: 'platformId is required' });
@@ -54,6 +69,12 @@ router.post('/', async (req: Request, res: Response) => {
       phone,
       company,
       message,
+      serviceInterest,
+      budgetRange,
+      dealValue: dealValue ? parseFloat(dealValue) : undefined,
+      confidenceLevel,
+      decisionMaker,
+      status,
       rawData: rawData || {},
     });
 

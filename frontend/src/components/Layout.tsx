@@ -28,6 +28,12 @@ export default function Layout() {
           >
             📋 Leads
           </Link>
+          <Link
+            to="/pipeline"
+            className={`nav-item ${isActive('/pipeline') ? 'active' : ''}`}
+          >
+            📈 Pipeline
+          </Link>
         </div>
 
         <div className="user-section">

@@ -10,6 +10,7 @@ import authRoutes from './routes/auth.js';
 import leadsRoutes from './routes/leads.js';
 import webhooksRoutes from './routes/webhooks.js';
 import dashboardRoutes from './routes/dashboard.js';
+import pipelineRoutes from './routes/pipeline.js';
 
 dotenv.config();
 
@@ -44,6 +45,7 @@ app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/leads', leadsRoutes);
 app.use('/api/v1/webhooks', webhooksRoutes);
 app.use('/api/v1/dashboard', dashboardRoutes);
+app.use('/api/v1/dashboard/pipeline', pipelineRoutes);
 
 // Socket.IO connection handling
 io.on('connection', (socket) => {

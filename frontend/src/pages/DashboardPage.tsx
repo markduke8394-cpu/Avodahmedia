@@ -1,17 +1,36 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useStore } from '../store/store';
+import CreatePhoneLeadModal from '../components/CreatePhoneLeadModal';
 import './DashboardPage.css';
 
 export default function DashboardPage() {
-  const { stats, fetchStats } = useStore();
+  const { stats, fetchStats, fetchLeads } = useStore();
+  const [showPhoneLeadModal, setShowPhoneLeadModal] = useState(false);
 
   useEffect(() => {
     fetchStats();
+    fetchLeads();
   }, []);
+
+  const handleLeadCreated = () => {
+    fetchStats();
+    fetchLeads();
+  };
 
   return (
     <div className="dashboard-page">
-      <h1>📊 Dashboard</h1>
+      <div className="dashboard-header">
+        <h1>📊 Dashboard</h1>
+        <button className="log-call-btn" onClick={() => setShowPhoneLeadModal(true)}>
+          ☎️ Log Phone Call
+        </button>
+      </div>
+
+      <CreatePhoneLeadModal
+        isOpen={showPhoneLeadModal}
+        onClose={() => setShowPhoneLeadModal(false)}
+        onLeadCreated={handleLeadCreated}
+      />
 
       <div className="stats-grid">
         <div className="stat-card">

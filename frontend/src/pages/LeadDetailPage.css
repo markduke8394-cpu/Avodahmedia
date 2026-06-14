@@ -292,6 +292,21 @@
   background-color: #535bf2;
 }
 
+.confidence-high {
+  color: #4caf50;
+  font-weight: 600;
+}
+
+.confidence-medium {
+  color: #ffc107;
+  font-weight: 600;
+}
+
+.confidence-low {
+  color: #f44336;
+  font-weight: 600;
+}
+
 .not-found {
   text-align: center;
   padding: 3rem 1rem;

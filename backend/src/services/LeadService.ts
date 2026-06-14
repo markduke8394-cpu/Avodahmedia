@@ -12,9 +12,13 @@ interface CreateLeadInput {
   message?: string;
   serviceInterest?: string;
   budgetRange?: string;
+  dealValue?: number;
+  confidenceLevel?: string;
+  decisionMaker?: boolean;
   leadSourceProfileUrl?: string;
   leadSourceProfileId?: string;
   rawData: any;
+  status?: string;
 }
 
 class LeadService {
@@ -39,9 +43,9 @@ class LeadService {
       const result = await query(
         `INSERT INTO leads (
           uuid, platform_id, first_name, last_name, email, phone, company,
-          message, service_interest, budget_range, lead_source_profile_url,
-          lead_source_profile_id, raw_data, status, priority
-        ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)
+          message, service_interest, budget_range, deal_value, confidence_level,
+          decision_maker, lead_source_profile_url, lead_source_profile_id, raw_data, status, priority
+        ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18)
         RETURNING *`,
         [
           leadUuid,
@@ -54,10 +58,13 @@ class LeadService {
           input.message || null,
           input.serviceInterest || null,
           input.budgetRange || null,
+          input.dealValue || null,
+          input.confidenceLevel || 'medium',
+          input.decisionMaker !== false ? true : false,
           input.leadSourceProfileUrl || null,
           input.leadSourceProfileId || null,
           JSON.stringify(input.rawData),
-          'new',
+          input.status || 'new',
           'medium',
         ]
       );

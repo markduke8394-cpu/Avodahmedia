@@ -4,6 +4,7 @@ import { useStore } from './store/store';
 import DashboardPage from './pages/DashboardPage';
 import LeadListPage from './pages/LeadListPage';
 import LeadDetailPage from './pages/LeadDetailPage';
+import PipelinePage from './pages/PipelinePage';
 import LoginPage from './pages/LoginPage';
 import Layout from './components/Layout';
 import './App.css';
@@ -28,6 +29,7 @@ function App() {
             <Route path="/" element={<DashboardPage />} />
             <Route path="/leads" element={<LeadListPage />} />
             <Route path="/leads/:id" element={<LeadDetailPage />} />
+            <Route path="/pipeline" element={<PipelinePage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
         )}

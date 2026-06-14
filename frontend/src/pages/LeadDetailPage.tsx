@@ -138,6 +138,23 @@ export default function LeadDetailPage() {
           </section>
 
           <section className="sidebar-section">
+            <h3>Deal Value</h3>
+            <p>{selectedLead.deal_value ? `$${selectedLead.deal_value.toLocaleString()}` : 'Not set'}</p>
+          </section>
+
+          <section className="sidebar-section">
+            <h3>Confidence Level</h3>
+            <p className={`confidence-${selectedLead.confidence_level || 'medium'}`}>
+              {selectedLead.confidence_level || 'Not set'}
+            </p>
+          </section>
+
+          <section className="sidebar-section">
+            <h3>Decision Maker</h3>
+            <p>{selectedLead.decision_maker ? '✅ Yes' : '❌ Not confirmed'}</p>
+          </section>
+
+          <section className="sidebar-section">
             <h3>Assigned To</h3>
             <p>{selectedLead.assigned_to_name || 'Unassigned'}</p>
           </section>
