@@ -25,7 +25,7 @@ export default function CreatePhoneLeadModal({
     phone: '',
     company: '',
     serviceInterest: 'website_design',
-    budgetRange: '$5K-10K',
+    budgetRange: '$3K-$5K',
     dealValue: '',
     decisionMaker: true,
     confidenceLevel: 'medium',
@@ -178,11 +178,11 @@ export default function CreatePhoneLeadModal({
                   value={formData.budgetRange}
                   onChange={handleChange}
                 >
-                  <option value="<$5K">&lt;$5K</option>
-                  <option value="$5K-10K">$5K-$10K</option>
-                  <option value="$10K-25K">$10K-$25K</option>
-                  <option value="$25K-50K">$25K-$50K</option>
-                  <option value="$50K+">$50K+</option>
+                  <option value="$2K-$3K">$2K-$3K (Small - 2 weeks)</option>
+                  <option value="$3K-$5K">$3K-$5K (Medium - 1 month)</option>
+                  <option value="$5K-$8K">$5K-$8K (Larger - 1 month)</option>
+                  <option value="$8K-$12K">$8K-$12K (Large - 6 weeks)</option>
+                  <option value="$12K+">$12K+ (Custom - discuss)</option>
                 </select>
               </div>
             </div>
